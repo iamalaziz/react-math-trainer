@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
-import Questions from "./components/Questions";
+import Problems from "./components/Problems";
 import Footer from "./components/Footer";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<About />} />
-        <Route path="/questions" element={<Questions />} />
+        <Route path="/problems" element={<Problems />} />
       </Routes>
 
       <Footer />

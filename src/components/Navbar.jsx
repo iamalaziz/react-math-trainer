@@ -16,7 +16,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="questions" className={({isActive})=>isActive ? "paint" : undefined}>Questions</NavLink>
+          <NavLink to="problems" className={({isActive})=>isActive ? "paint" : undefined}>Questions</NavLink>
         </li>
       </ul>
     </div>
