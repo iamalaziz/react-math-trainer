@@ -7,16 +7,15 @@ const ProblemsContext = createContext();
 const ProblemsProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true)
-
+  
   const fetchData = async () => {
     const chaptersFromFirebase = [];
     const querySnapshot = await getDocs(collection(db, "chapters"));
     querySnapshot.forEach((doc) => {
       chaptersFromFirebase.push({ ...doc.data(), key: doc.id });
       setData(chaptersFromFirebase)
-      setTimeout(() => {
-        setLoading(false)
-      }, 1000)
+      setLoading(false)
+
     });
   };
 
