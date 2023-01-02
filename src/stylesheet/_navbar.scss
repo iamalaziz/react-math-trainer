@@ -51,7 +51,10 @@ header {
   }
   @media screen and (max-width: 500px) {
     .navbar {
-      padding: 2rem;
+      padding: 1rem 2rem;
+      &__logo {
+        font-size: 1rem;
+      }
       &__nav-list {
         display: none;
       }
