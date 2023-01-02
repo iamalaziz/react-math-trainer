@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../stylesheet/_navbar.scss";
 import { CgDetailsMore } from "react-icons/cg";
-import Sidebar from "./Sidebar";
+import {useProblems} from '../context/problems-context'
 
 const Navbar = () => {
-  const [navToggle, setNavToggle] = useState(false)
-  
+  const {isBurgerOpen, setIsBurgerOpen} = useProblems();
+
   return (
     <header>
       <div className="navbar">
         <h1 className="navbar__logo">
           <span className="paint">MATH</span> Trainer
         </h1>
-        <div className="navbar__burger" onClick={() => setNavToggle(!navToggle)}>
+        <div className="navbar__burger" onClick={() => setIsBurgerOpen(true)}>
           <CgDetailsMore className="icon" />
         </div>
         <ul className="navbar__nav-list">

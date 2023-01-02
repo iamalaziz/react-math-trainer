@@ -7,7 +7,7 @@ const ProblemsContext = createContext();
 const ProblemsProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true)
-  
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
   const fetchData = async () => {
     const chaptersFromFirebase = [];
     const querySnapshot = await getDocs(collection(db, "chapters"));
@@ -23,7 +23,7 @@ const ProblemsProvider = ({ children }) => {
     fetchData();
   }, []);
   
-  const values = {data, loading}
+  const values = {data, loading, isBurgerOpen, setIsBurgerOpen}
   return (
     <ProblemsContext.Provider value={values}>{children}</ProblemsContext.Provider>
   );
