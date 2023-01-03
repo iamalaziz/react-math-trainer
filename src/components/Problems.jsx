@@ -1,33 +1,44 @@
 import React from "react";
 import "../stylesheet/_problems.scss";
-import { lessons } from "../mockData";
+import lessons from "../mockData";
+import { useNavigate } from "react-router-dom";
 
 const Problems = () => {
+  const navigate = useNavigate();
+
   return (
     <section>
       <div className="container">
         <h1 className="main-section-title">Tasks Board</h1>
         <div className="chapters">
           {lessons.length > 0 &&
-            lessons.map((lesson, index) => {
-                return (
-                <div className="chapter" key={index}>
+            lessons.map((lesson) => {
+              return (
+                <div className="chapter" key={lesson.id}>
                   <div>
-                    <h3 className="chapter__index">{index + 1}</h3>
-                    <h1 className="chapter__title">{lesson}</h1>
+                    <h3 className="chapter__index">{lesson.id}</h3>
+                    <h1 className="chapter__title">{lesson.title}</h1>
+                    <p className="chapter__caption">{lesson.caption}</p>
                   </div>
-                  <ul>
+                  <ul className="exercise-count">
                     <li>
-                      Includes <span>15 tasks</span>
+                      Includes <span>{lesson.tasks} tasks</span>
                     </li>
                     <li>
-                      Includes <span>125 problems</span>
-                    </li>
-                    <li>
-                      <span>Beginner</span> Friendly
+                      Includes <span>{lesson.exercises} problems</span>
                     </li>
                   </ul>
-                  <button className="start-btn">Solve Challenges</button>
+                  <ul className="stack">
+                    {lesson.subsections.map((key, index) => {
+                      return <li key={index}>{key}</li>;
+                    })}
+                  </ul>
+                  <button
+                    className="start-btn"
+                    onClick={() => navigate(`/problems/${lesson.id}`)}
+                  >
+                    Solve Challenges
+                  </button>
                 </div>
               );
             })}

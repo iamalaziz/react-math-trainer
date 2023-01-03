@@ -42,7 +42,11 @@
         background-color: #2980FF;
         border-radius: 0.3rem 0.3rem 0 0;
       }
-      ul {
+      &__caption {
+        font-weight: 300;
+        padding: 1rem;
+      }
+      .exercise-count {
         padding: 1rem 1rem 0 1rem;
         margin-top: auto;
         li {
@@ -51,6 +55,19 @@
           span {
             font-weight: 600;
           }
+        }
+      }
+      .stack {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        padding: 1rem;
+        margin-top: auto;
+        li {
+          padding: .4rem;
+          background-color: aliceblue;
+          border-radius: 5px;
+
         }
       }
       .start-btn {
@@ -62,6 +79,7 @@
         color: #2980FF;
         font-size: 1.2rem;
         transition: .2s all;
+        margin-top: auto;
         &:hover {
           background-color: #2980FF;
           color: #fff;

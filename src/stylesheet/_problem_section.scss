@@ -1,0 +1,54 @@
+.problems_section {
+  .lesson_title {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .task {
+    &__instruction {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: hsl(255deg, 85%, 30%);
+    }
+    &__order-num {
+      background-color: hsl(255deg, 85%, 30%);
+      color: #fff;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    &__problems {
+      margin: 1rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+      .problem {
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 400px;
+        &__answer {
+          width: 4rem;
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .task__problems {
+        display: flex;
+        flex-direction: column;
+        .problem {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

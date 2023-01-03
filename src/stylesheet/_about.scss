@@ -1,0 +1,68 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 90%;
+  overflow: hidden;
+  .hero-text {
+    float: left;
+    h1 {
+      font-size: 3rem;
+      font-family: "Sriracha", "Wotfard", Futura, -apple-system, sans-serif;
+      font-style: italic;
+    }
+    p {
+      font-weight: 300;
+      max-width: 500px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem;
+
+      .hero__btn {
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 0.5rem 2rem;
+        background: none;
+        font-size: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        &.paint {
+          &::after {
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            top: 4px;
+            right: 4px;
+          }
+        }
+      }
+    }
+  }
+  video {
+    border: 2px solid #2980ff;
+    border-radius: 1rem;
+    max-width: 700px;
+    width: clamp(370px, 50vw, 600px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .about {
+    margin-top: 6rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    .hero-text {
+      h1,
+      p {
+        text-align: center;
+      }
+      button {
+        text-align: center;
+        margin: 2rem auto;
+        width: 100%;
+        background: none;
+      }
+    }
+  }
+}
