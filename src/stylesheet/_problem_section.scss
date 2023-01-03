@@ -4,6 +4,7 @@
     margin: 1rem 0;
   }
   .task {
+    margin: 2rem 0;
     &__instruction {
       font-size: 1.2rem;
       font-weight: 500;
@@ -31,13 +32,64 @@
         align-items: center;
         justify-content: space-between;
         max-width: 400px;
+        position: relative;
         &__answer {
           width: 4rem;
+          border: 1px solid #d8d7d7;
+          font-size: 1.1rem;
+          padding: 0 0.4re m;
+          outline: none;
+          text-align: center;
+          &.correct_input {
+            border: 1px solid green;
+          }
+          &.wrong_input {
+            border: 1px solid red;
+          }
           &::-webkit-outer-spin-button,
           &::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
           }
+        }
+
+        &.correct_text::before {
+          content: "Correct!";
+          color: green;
+          position: absolute;
+          right: -70px;
+        }
+        &.wrong_text::before {
+          content: "Wrong!";
+          color: red;
+          position: absolute;
+          right: -70px;
+        }
+      }
+    }
+    .problems_dashboard {
+      display: flex;
+      align-items: center;
+
+      .submit-btn {
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        color: #fff;
+        border-radius: 0.5rem;
+        background-color: rgb(45 181 93);
+        transition: 0.3s;
+        margin: 0 3.5rem;
+        &:hover {
+          background-color: rgb(38 154 79);
+        }
+      }
+      .score_result {
+        font-size: 1.1rem;
+        color: rgb(45 181 93);
+        span {
+          font-weight: 600;
+          font-size: 1.3rem;
+          font-family: "Sriracha", "Wotfard", Futura, -apple-system;
         }
       }
     }
@@ -47,6 +99,7 @@
         flex-direction: column;
         .problem {
           justify-content: space-between;
+          margin-right: 3rem;
         }
       }
     }

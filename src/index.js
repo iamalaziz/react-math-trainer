@@ -7,11 +7,9 @@ import ProblemsProvider from "./context/problems-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ProblemsProvider>
-        <App />
-      </ProblemsProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <ProblemsProvider>
+      <App />
+    </ProblemsProvider>
+  </BrowserRouter>
 );
