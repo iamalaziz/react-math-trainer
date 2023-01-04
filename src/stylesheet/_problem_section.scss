@@ -37,7 +37,7 @@
           width: 4rem;
           border: 1px solid #d8d7d7;
           font-size: 1.1rem;
-          padding: 0 0.4re m;
+          padding: 0 0.4rem;
           outline: none;
           text-align: center;
           &.correct_input {
@@ -70,7 +70,6 @@
     .problems_dashboard {
       display: flex;
       align-items: center;
-
       .submit-btn {
         font-weight: 600;
         padding: 0.6rem 1.2rem;
@@ -100,6 +99,27 @@
         .problem {
           justify-content: space-between;
           margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .problems_section {
+    .task {
+      &__instruction {
+        font-size: 1rem;
+      }
+      &__order-num {
+        width: 2rem;
+        height: 2rem;
+      }
+      &__problems {
+        margin: 1rem;
+      }
+      .problems_dashboard {
+        .submit-btn {
+          margin: 1rem;
         }
       }
     }

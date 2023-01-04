@@ -2,6 +2,8 @@ import React from "react";
 import "../stylesheet/_problems.scss";
 import lessons from "../mockData";
 import { useNavigate } from "react-router-dom";
+import { IoStarOutline } from "react-icons/io5";
+import { GrTask } from "react-icons/gr";
 
 const Problems = () => {
   const navigate = useNavigate();
@@ -15,19 +17,19 @@ const Problems = () => {
             lessons.map((lesson) => {
               return (
                 <div className="chapter" key={lesson.id}>
-                  <div>
-                    <h3 className="chapter__index">{lesson.id}</h3>
-                    <h1 className="chapter__title">{lesson.title}</h1>
-                    <p className="chapter__caption">{lesson.caption}</p>
-                  </div>
+                  <h3 className="chapter__index">{lesson.id}</h3>
+                  <h1 className="chapter__title">{lesson.title}</h1>
                   <ul className="exercise-count">
                     <li>
-                      Includes <span>{lesson.tasks} tasks</span>
+                      <IoStarOutline />
+                      <strong>{lesson.tasks}</strong> tasks
                     </li>
                     <li>
-                      Includes <span>{lesson.exercises} problems</span>
+                      <GrTask />
+                      <strong>{lesson.exercises}</strong> problems
                     </li>
                   </ul>
+                  <p className="chapter__caption">{lesson.caption}</p>
                   <ul className="stack">
                     {lesson.subsections.map((key, index) => {
                       return <li key={index}>{key}</li>;

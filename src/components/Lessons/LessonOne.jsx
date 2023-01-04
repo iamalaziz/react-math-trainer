@@ -19,7 +19,7 @@ const LessonOne = () => {
   const answerInput = (userAnswer, problem, index) => {
     const updatedTasks = [...tasks].map((task, taskIndex) => {
       if (taskIndex === index) {
-        task.problems[problem.id - 1].userInput = +userAnswer;
+        task.problems[problem.id - 1].userInput = userAnswer;
       }
       return task;
     });
@@ -29,18 +29,23 @@ const LessonOne = () => {
   const handleSubmit = () => {
     const updatedTasks = [...tasks].map((task) => {
       task.problems.map((problem) => {
-        problem.userInput &&
+        problem.userInput.length !== 0 &&
           (problem.result =
-            problem.userInput === problem.answer ? true : false);
-        if (problem.result === true) {
-          task.correctAnswers += 1;
-        }
+            +problem.userInput === problem.answer ? true : false);
         return problem;
       });
+      task.correctAnswers = countTrueResults(task);
       return task;
     });
     setTasks(updatedTasks);
   };
+
+  const countTrueResults = (task) => {
+    let count = 0;
+    count += task.problems.filter((problem) => problem.result === true).length;
+    return count;
+  };
+
   return (
     <section className="problems_section">
       <h1 className="lesson_title">Lesson 1</h1>
@@ -67,6 +72,7 @@ const LessonOne = () => {
                     <input
                       type="number"
                       className="problem__answer"
+                      value={problem.userInput}
                       onChange={(e) =>
                         answerInput(e.target.value, problem, index)
                       }

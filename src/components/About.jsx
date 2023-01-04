@@ -8,10 +8,15 @@ const About = () => {
     <section className="about">
       <div className="container">
         <div className="hero-text hero">
-          <h1>Math Problems</h1>
+          <h1>Math Expert.</h1>
+          <h3>
+            The interactive learning experience designed to help math learners
+            become confident with Math
+          </h3>
           <p>
-            You will find so much useful content to practice your math skills.
-            You will be provided relative instructions and materials.
+            Maths is more than just numbers. With unlimited questions, engaging
+            item types, and real-world scenarios, <span>Math Expert</span> helps
+            learners experience maths at its most mesmerising!
           </p>
           <button>
             <NavLink to="problems" className="hero__btn paint">
