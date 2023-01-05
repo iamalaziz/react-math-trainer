@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-math-trainer/static/css/main.2d6cbc9f.css",
-    "main.js": "/react-math-trainer/static/js/main.17d16d2f.js",
+    "main.css": "/react-math-trainer/static/css/main.a31c4925.css",
+    "main.js": "/react-math-trainer/static/js/main.e370fe57.js",
     "static/media/hero-video.mp4": "/react-math-trainer/static/media/hero-video.e3ff57ba36b72190404b.mp4",
     "static/media/bg-texture.svg": "/react-math-trainer/static/media/bg-texture.9c4912cbd296873f2978.svg",
     "static/media/wave.png": "/react-math-trainer/static/media/wave.f8f5a79a38c3cf913fe8.png",
     "index.html": "/react-math-trainer/index.html",
-    "main.2d6cbc9f.css.map": "/react-math-trainer/static/css/main.2d6cbc9f.css.map",
-    "main.17d16d2f.js.map": "/react-math-trainer/static/js/main.17d16d2f.js.map"
+    "main.a31c4925.css.map": "/react-math-trainer/static/css/main.a31c4925.css.map",
+    "main.e370fe57.js.map": "/react-math-trainer/static/js/main.e370fe57.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d6cbc9f.css",
-    "static/js/main.17d16d2f.js"
+    "static/css/main.a31c4925.css",
+    "static/js/main.e370fe57.js"
   ]
 }
