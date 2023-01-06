@@ -1,10 +1,11 @@
 import React from 'react'
+import '../../stylesheet/_problem_section.scss';
 
 const LessonTwo = () => {
   return (
-    <div>
-      Lesson1
-    </div>
+    <section className='problems_section'>
+      Lesson 2
+    </section>
   )
 }
 

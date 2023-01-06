@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="about">
+    <div className="about">
       <div className="container">
         <div className="hero-text hero">
           <h1>Math Expert.</h1>
@@ -24,9 +24,9 @@ const About = () => {
             </NavLink>
           </button>
         </div>
-        <video src={Video} className="video" autoPlay="true" loop="loop" />
+        <video src={Video} className="video" autoPlay={true} loop="loop" />
       </div>
-    </section>
+    </div>
   );
 };
 

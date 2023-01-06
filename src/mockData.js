@@ -1,49 +1,3 @@
-const lessons = [
-  {
-    id: 1,
-    title: "Arithmetics of Natual Numbers",
-    caption: "Perform multi-step calculations with natural numbers",
-    tasks: 23,
-    exercises: 207,
-    subsections: [
-      "addition",
-      "division",
-      "subtraction",
-      "multiplication",
-      "naturals",
-    ],
-  },
-  {
-    id: 2,
-    title: "Divisibility Rules",
-    caption: "Rules to determine if a number is divisible by another number",
-    tasks: 12,
-    exercises: 126,
-    subsections: ["factors", "divisibility"],
-  },
-  {
-    id: 3,
-    title: "Prime Decomposition of Natual Numbers",
-    caption: "Expressing numbers as a multiplication of prime numbers",
-    tasks: 18,
-    exercises: 89,
-    subsections: ["primes", "distinct prime factors", "exponent"],
-  },
-  {
-    id: 4,
-    title: "GCF & LCM",
-    caption: "Greatest Common Factor & Least Common Multiples",
-    tasks: 23,
-    exercises: 186,
-    subsections: [
-      "factors",
-      "divisibility",
-      "primes",
-      "distinct prime factors",
-    ],
-  },
-];
-
 export const tasks1 = [
   {
     id: 1,
@@ -221,5 +175,53 @@ export const tasks1 = [
     ],
   },
 ];
+
+
+const lessons = [
+  {
+    id: 1,
+    title: "Arithmetics of Natual Numbers",
+    caption: "Perform multi-step calculations with natural numbers",
+    tasks: 23,
+    exercises: 207,
+    subsections: [
+      "addition",
+      "division",
+      "subtraction",
+      "multiplication",
+      "naturals",
+    ],
+  },
+  {
+    id: 2,
+    title: "Divisibility Rules",
+    caption: "Rules to determine if a number is divisible by another number",
+    tasks: 12,
+    exercises: 126,
+    subsections: ["factors", "divisibility"],
+  },
+  {
+    id: 3,
+    title: "Prime Decomposition of Natual Numbers",
+    caption: "Expressing numbers as a multiplication of prime numbers",
+    tasks: 18,
+    exercises: 89,
+    subsections: ["primes", "distinct prime factors", "exponent"],
+  },
+  {
+    id: 4,
+    title: "GCF & LCM",
+    caption: "Greatest Common Factor & Least Common Multiples",
+    tasks: 23,
+    exercises: 186,
+    subsections: [
+      "factors",
+      "divisibility",
+      "primes",
+      "distinct prime factors",
+    ],
+  },
+];
+
 
 export default lessons;

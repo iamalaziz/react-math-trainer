@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import { useProblems } from "./context/problems-context";
 import Intro from "./components/Intro";
 import Footer from "./components/Footer";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   const { isBurgerOpen } = useProblems();
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/problems" element={<Problems />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/problems/1" element={<LessonOne />} />
         <Route path="/problems/2" element={<LessonTwo />} />
         <Route path="/problems/3" element={<LessonThree />} />

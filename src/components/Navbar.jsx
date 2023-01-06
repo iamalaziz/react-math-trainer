@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../stylesheet/_navbar.scss";
 import { CgDetailsMore } from "react-icons/cg";
-import {useProblems} from '../context/problems-context'
+import { useProblems } from "../context/problems-context";
 
 const Navbar = () => {
-  const {isBurgerOpen, setIsBurgerOpen} = useProblems();
+  const { isBurgerOpen, setIsBurgerOpen } = useProblems();
 
   return (
     <header>
@@ -32,6 +32,14 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "paint" : undefined)}
             >
               Questions
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="dashboard"
+              className={({ isActive }) => (isActive ? "paint" : undefined)}
+            >
+              Dashboard
             </NavLink>
           </li>
         </ul>

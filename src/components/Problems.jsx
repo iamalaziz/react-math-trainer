@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../stylesheet/_problems.scss";
-import lessons from "../mockData";
+// import lessons from "../mockData";
 import { useNavigate } from "react-router-dom";
 import { IoStarOutline } from "react-icons/io5";
 import { GrTask } from "react-icons/gr";
+import { getChapters } from "../firebase/firebase";
 
 const Problems = () => {
   const navigate = useNavigate();
+  const [chapters, setChapters] = useState([]);
 
+  // getChapters().then(items => ));
+  console.log(chapters)
   return (
     <section>
       <div className="container">
         <h1 className="main-section-title">Tasks Board</h1>
         <div className="chapters">
-          {lessons.length > 0 &&
-            lessons.map((lesson) => {
+          {chapters.length > 0 &&
+            chapters.map((lesson) => {
               return (
                 <div className="chapter" key={lesson.id}>
                   <h3 className="chapter__index">{lesson.id}</h3>

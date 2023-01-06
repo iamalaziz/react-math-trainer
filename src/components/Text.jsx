@@ -6,7 +6,7 @@ import Arrow from "../assets/stubby-arrow.png";
 const Text = () => {
   return (
     <div className="text">
-      {/* */}
+      <div className="wavy_img"></div>
       <div className="text__container">
         <h2>
           Math can be fun. <strong>I promise.</strong>
@@ -76,7 +76,7 @@ const Text = () => {
             </h1>
           </div>
         </div>
-        <div className="space"></div>
+
       </div>
     </div>
   );

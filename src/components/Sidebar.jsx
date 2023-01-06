@@ -30,6 +30,14 @@ const Sidebar = () => {
               Questions
             </NavLink>
           </li>
+          <li className="nav-item" onClick={() => setIsBurgerOpen(false)}>
+            <NavLink
+              to="dashboard"
+              className={({ isActive }) => (isActive ? "paint" : undefined)}
+            >
+              Dashboard
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

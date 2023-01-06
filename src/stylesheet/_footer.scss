@@ -1,9 +1,10 @@
 .footer {
   background-color: #2980ff;
+  margin-top: auto;
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 1rem 0;
     p {
       text-align: center;
