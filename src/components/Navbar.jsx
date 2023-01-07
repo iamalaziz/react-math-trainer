@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "../stylesheet/_navbar.scss";
 import { CgDetailsMore } from "react-icons/cg";
 import { useProblems } from "../context/problems-context";
 
 const Navbar = () => {
-  const { isBurgerOpen, setIsBurgerOpen } = useProblems();
+  const { setIsBurgerOpen } = useProblems();
 
   return (
     <header>

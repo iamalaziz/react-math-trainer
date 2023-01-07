@@ -1,17 +1,15 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import { getChapters } from "../firebase/firebase";
-
+import { createContext, useContext, useState } from "react";
 
 const ProblemsContext = createContext();
 
 const ProblemsProvider = ({ children }) => {
-  const [chapters, setChapters] = useState([]);
-  const [loading, setLoading] = useState(true)
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
-  
-  const values = {setChapters, loading, isBurgerOpen, setIsBurgerOpen}
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  const values = { isBurgerOpen, setIsBurgerOpen };
   return (
-    <ProblemsContext.Provider value={values}>{children}</ProblemsContext.Provider>
+    <ProblemsContext.Provider value={values}>
+      {children}
+    </ProblemsContext.Provider>
   );
 };
 export const useProblems = () => useContext(ProblemsContext);
