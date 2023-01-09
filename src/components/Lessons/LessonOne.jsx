@@ -1,19 +1,35 @@
 import React, { useEffect, useState } from "react";
 import "../../stylesheet/_problem_section.scss";
 import { tasks1 } from "../../mockData";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const LessonOne = () => {
-  const [tasks, setTasks] = useState(tasks1);
-
+  const [tasks, setTasks] = useState([...tasks1]);
+  const [tasksFirebase, setTasksFirebase] = useState([]);
+  async function fetchTask1() {
+    const taskRef = doc(db, "chapters/h63Z7u5X0apUZMElBSNB/tasks/");
+    const docSnap = await getDoc(taskRef);
+    const current = [];
+    // console.log(docSnap.data());
+    if (docSnap.exists()) {
+      setTasksFirebase([...tasksFirebase, docSnap.data()])
+    } else {
+      console.log("No data");
+    }
+  }
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("tasks1"));
+    fetchTask1();
+  }, []);
+  console.log(tasksFirebase);
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem("tasks"));
     if (storedData) {
       setTasks(storedData);
     }
   }, []);
-
   useEffect(() => {
-    localStorage.setItem("tasks1", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const answerInput = (userAnswer, problem, index) => {
