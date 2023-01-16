@@ -11,18 +11,17 @@ const Problems = () => {
   const navigate = useNavigate();
   const [chapters, setChapters] = useState([])
 
-  // const getChapters = async () => {
-  //   const chaptersFromFirebase = []
-  //   const querySnapshot = await getDocs(collection(db, "chapters"));
-  //   querySnapshot.forEach((doc) => {
-  //     chaptersFromFirebase.push({ ...doc.data(), key: doc.id });
-  //   });
-  //   setChapters(chaptersFromFirebase)
-  // };
+  const getChapters = async () => {
+    const chaptersFromFirebase = []
+    const querySnapshot = await getDocs(collection(db, "chapters"));
+    querySnapshot.forEach((doc) => {
+      chaptersFromFirebase.push({ ...doc.data(), key: doc.id });
+    });
+    setChapters(chaptersFromFirebase)
+  };
   
   useEffect(() => {
-    // if(chapters.length === 0) getChapters();
-    setChapters(lessons)
+    if(chapters.length === 0) getChapters();
   }, [])
   
   console.log(chapters);
