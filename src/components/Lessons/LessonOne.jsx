@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../../stylesheet/_problem_section.scss";
 import { tasks1 } from "../../mockData";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { getDocs } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
-// this is firebase
 
 const LessonOne = () => {
   const [tasks, setTasks] = useState([...tasks1]);
